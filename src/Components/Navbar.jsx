@@ -2,7 +2,6 @@ import { getAuth, signOut } from 'firebase/auth'
 import React, { useContext } from 'react'
 import { AuthContext } from '../Context/AuthContext'
 import { app } from '../Firebase'
-import Profile from "../Images/Profile.png"
 
 const Navbar = () => {
     const {currentUser} = useContext(AuthContext);
