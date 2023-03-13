@@ -6,7 +6,6 @@ import Profile from "../Images/Profile.png"
 
 const Navbar = () => {
     const {currentUser} = useContext(AuthContext);
-    console.log(currentUser)
     return (
         <div className='navbar'>
             <span className='logo-home'>FireChat</span>

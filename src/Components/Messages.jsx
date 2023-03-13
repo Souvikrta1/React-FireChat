@@ -7,7 +7,6 @@ import Message from "./Message";
 const Messages = () => {
     const [messages, setMessages] = useState([]);
     const { data } = useContext(ChatContext);
-    console.log(data)
 
     useEffect(() => {
         const unSub = onSnapshot(doc(db, "chats", data.chatId), (doc) => {

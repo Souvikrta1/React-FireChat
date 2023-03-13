@@ -1,5 +1,5 @@
 @mixin mobile {
-  @media screen and (max-width: 580px) {
+  @media screen and (max-width: 480px) {
     @content;
   }
 }
@@ -103,15 +103,14 @@
     @include tablet {
       width: 90%;
     }
-    @include mobile{
-      flex-direction: column;
-    }
     /* Design for sidebar*/
     .sidebar {
       flex: 1;
       background-color: #3e3c61;
       position: relative;
-      
+      @include mobile{
+        width: 30%; 
+        }
 
       .navbar {
         display: flex;
@@ -121,6 +120,7 @@
         padding: 10px;
         justify-content: space-between;
         color: #ddddf7;
+        
 
         .logo {
           font-weight: bold;
@@ -141,6 +141,12 @@
             object-fit: cover;
           }
 
+          span{
+            @include mobile{
+              display: none;
+            }
+          }
+
           button {
             background-color: #5d5b8d;
             color: #ddddf7;
@@ -150,10 +156,6 @@
             @include tablet {
               position: absolute;
               bottom: 10px;
-            }
-            @include mobile{
-              position:relative;
-              top: 0;
             }
           }
         }
@@ -194,12 +196,18 @@
           height: 50px;
           border-radius: 50%;
           object-fit: cover;
+          @include mobile{
+            display: none;
+          }
         }
 
         .userChatInfo {
           span {
             font-size: 18px;
             font-weight: 500;
+            @include mobile{
+              font-size: smaller;
+              }
           }
           p {
             font-size: 14px;
@@ -216,9 +224,15 @@
         background-color: #5d5b8d;
         display: flex;
         align-items: center;
-        justify-content: space-between;
         padding: 10px;
         color: lightgray;
+
+        img{
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
       }
 
       .chatIcons {
