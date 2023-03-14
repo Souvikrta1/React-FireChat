@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import "./Style.scss"
+import "./Style.css"
 import Home from './Pages/Home'
 import Login from './Pages/Login'
 import Register from './Pages/Register'

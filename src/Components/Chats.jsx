@@ -25,6 +25,10 @@ const Chats = () => {
     }, [currentUser.uid]);
 
     const handleSelect = (u) => {
+        if(window.innerWidth <=500){
+            document.querySelector(".sidebar").style.display = "none"
+            document.querySelector(".chat").style.display = "block"
+        }
         dispatch({ type: "CHANGE_USER", payload: u });
     };
 
