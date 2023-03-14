@@ -21,7 +21,7 @@ const Chat = () => {
                 document.querySelector(".chat").style.display = "none"
             }
         }
-    })
+    },[])
 
     return (
         <div className='chat'>
