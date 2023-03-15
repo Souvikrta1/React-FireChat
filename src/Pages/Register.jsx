@@ -3,7 +3,7 @@ import Profile from "../Images/Profile.png"
 import { getAuth, createUserWithEmailAndPassword,updateProfile } from "firebase/auth";
 import { app, storage,db } from '../Firebase';
 import { doc, setDoc } from "firebase/firestore";
-import { getStorage, ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
+import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
 
@@ -44,7 +44,7 @@ const Register = () => {
                             email,
                             photoURL: downloadURL,
                         });
-
+                        console.log(loading)
                         //create empty user chats on firestore
                         await setDoc(doc(db, "userChats", res.user.uid), {});
                         navigate("/");
