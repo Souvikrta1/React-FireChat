@@ -10,6 +10,7 @@ import { AuthContext } from './Context/AuthContext'
 const App = () => {
     const {currentUser} = useContext(AuthContext);
 
+    //for preventing user moving to main page without login
     const ProtectedRoute = ({children}) =>{
         if(!currentUser){
             return <Navigate to="/Login"/>

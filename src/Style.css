@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+*{
+    font-family: poppins,sans-serif;
+}
+
 .formContainer {
     height: 100vh;
     display: flex;
@@ -59,6 +65,12 @@
     color: #5d5b8d;
     font-size: 16px;
     margin-top: 10px;
+}
+
+.formWrapper form span{
+    color: red;
+    text-align: center;
+    font-weight: 700;
 }
 
 /* Design for Homepage*/

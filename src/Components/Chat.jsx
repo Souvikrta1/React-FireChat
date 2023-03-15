@@ -10,7 +10,7 @@ const Chat = () => {
         document.querySelector(".sidebar").style.display = "block"
         document.querySelector(".chat").style.display = "none"
     }
-
+    //for responsive view
     useEffect(() => {
         window.onresize = () => {
             if(window.innerWidth > 480){

@@ -13,6 +13,7 @@ const Register = () => {
     const auth = getAuth(app);
     const navigate = useNavigate()
 
+    //sign up 
     const handleSubmit = async (e) => {
         e.preventDefault();
         const displayName = e.target.Name.value;
