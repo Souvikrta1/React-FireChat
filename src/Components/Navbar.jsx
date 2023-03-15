@@ -5,6 +5,7 @@ import { app } from '../Firebase'
 
 const Navbar = () => {
     const {currentUser} = useContext(AuthContext);
+    
     return (
         <div className='navbar'>
             <span className='logo-home'>FireChat</span>

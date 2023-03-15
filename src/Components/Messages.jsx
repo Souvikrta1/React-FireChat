@@ -9,6 +9,7 @@ const Messages = () => {
     const { data } = useContext(ChatContext);
 
     useEffect(() => {
+        //listening to data changes in firebase 
         const unSub = onSnapshot(doc(db, "chats", data.chatId), (doc) => {
             doc.exists() && setMessages(doc.data().messages);
         });
@@ -17,8 +18,6 @@ const Messages = () => {
             unSub();
         };
     }, [data.chatId]);
-
-    console.log(messages)
 
     return (
         <div className="messages">

@@ -8,10 +8,11 @@ export const AuthContextProvider = ({children}) =>{
     const [currentUser,setCurrentUser] = useState({})
 
     useEffect(()=>{
+        //Giving us user logged in or not
         const unsub = onAuthStateChanged(getAuth(app),(user)=>{
             setCurrentUser(user)
         });
-        
+
         return () =>{
             unsub()
         }

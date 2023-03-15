@@ -12,7 +12,9 @@ const Chats = () => {
 
     useEffect(() => {
         const getChats = () => {
+            //listening with listener event of firebase for data changes (like it contains last message sent data)
             const unsub = onSnapshot(doc(db, "userChats", currentUser.uid), (doc) => {
+                console.log(doc.data())
                 setChats(doc.data());
             });
 
@@ -29,6 +31,7 @@ const Chats = () => {
             document.querySelector(".sidebar").style.display = "none"
             document.querySelector(".chat").style.display = "block"
         }
+        
         dispatch({ type: "CHANGE_USER", payload: u });
     };
 

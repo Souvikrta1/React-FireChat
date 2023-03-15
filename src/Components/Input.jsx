@@ -21,6 +21,7 @@ const Input = () => {
     const { currentUser } = useContext(AuthContext);
     const { data } = useContext(ChatContext);
 
+    // uploading text & images in firebase database
     const handleSend = async () => {
         if (img) {
             const storageRef = ref(storage, uuid());
